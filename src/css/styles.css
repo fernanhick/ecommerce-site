@@ -1,0 +1,202 @@
+:root {
+    font-size: 18px;
+    --background-body: rgba(0, 0, 0, 0.9);
+    --main-green-dark: rgb(75, 133, 0);
+    --main-green-dark-shadow: rgb(17, 31, 0);
+    --main-green-dark-strong: rgb(48, 85, 0);
+    --main-font-light: rgba(250, 250, 250, 0.85);
+    --main-font-dark: rgba(31, 31, 31, 0.85);
+    --hover-light: rgba(255, 255, 255, 0.3);
+    --back-light: rgba(255, 255, 255, 0.1);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0 auto;
+    padding: 0;
+    background-color: var(--background-body);
+    place-items: center;
+}
+@media screen and (max-width: 1200px) {
+    :root {
+        font-size: 26px;
+    }
+}
+@media screen and (max-width: 900px) {
+    :root {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 600px) {
+    :root {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 400px) {
+    :root {
+        font-size: 12px;
+    }
+}
+main {
+    margin: 0 auto;
+
+    width: 100%;
+    max-width: 1900px;
+    background-color: var(--back-light);
+}
+#navigation {
+    z-index: 999;
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 10vw;
+    background: var(--main-green-dark);
+    height: 30px;
+    transition: all 1s;
+    overflow: hidden;
+    border-bottom: 1px solid var(--hover-light);
+}
+#navigation ul {
+    display: flex;
+    gap: 0.5rem;
+    transition: all ease-in-out 1s;
+}
+#navigation ul li {
+    list-style-type: none;
+    padding: 3px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#navigation ul li a {
+    text-decoration: none;
+    color: var(--main-font-light);
+    text-transform: uppercase;
+}
+#navigation ul li:hover {
+    background-color: var(--hover-light);
+}
+#burger_icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 1.5em;
+    height: 1.5em;
+    padding: 2px;
+    cursor: pointer;
+    border: 2px solid var(--hover-light);
+    border-radius: 5px;
+}
+.nav_toggle {
+    height: 15vh !important;
+}
+.nav_toggle ul {
+    display: flex !important;
+    flex-direction: column;
+    transition: all 1s;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#burger_icon > span {
+    width: 100%;
+    height: 1px;
+    background-color: var(--hover-light);
+    content: '';
+}
+#logo {
+    display: flex;
+    color: var(--main-font-light);
+}
+.active {
+    background-color: var(--hover-light);
+}
+.container {
+    width: 100%;
+    height: clamp(600px, 100vh, 900px);
+    position: relative;
+}
+#hero_section {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+#hero_section picture {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.45;
+}
+#hero_section article {
+    backdrop-filter: blur(20px);
+    padding: 1em;
+}
+#hero_title {
+    position: absolute;
+    top: 10em;
+    left: 5em;
+    font-size: 1.2em;
+    color: white;
+}
+#hero_title > h1 {
+    font-size: 2.5em;
+}
+#hero_button {
+    position: absolute;
+    bottom: 8em;
+    left: 50%;
+    padding: 2px 1em;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    background-color: var(--main-green-dark);
+    border: none;
+    text-transform: uppercase;
+    color: var(--main-font-light);
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px var(--main-font-light);
+    transition: all 0.2s ease-in-out;
+}
+#hero_button:hover {
+    background-color: var(--main-green-dark-strong);
+}
+
+#footer_bar {
+    padding: 2vh 10vw;
+    background: var(--main-green-dark);
+    height: 30px;
+    display: flex;
+    width: 100%;
+    gap: 0.5em;
+    color: var(--main-font-light);
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+#footer_bar section a {
+    text-decoration: none;
+    color: var(--main-font-light);
+}
+#footer_bar section {
+}
+
+@media screen and (max-width: 600px) {
+    #burger_icon {
+        display: flex;
+    }
+    #navigation ul {
+        display: none;
+    }
+    #footer_bar,
+    #navigation {
+        padding: 3px 10px;
+    }
+}
