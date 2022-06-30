@@ -134,3 +134,39 @@ main {
         padding: 3px 10px;
     }
 }
+#about_section h2 {
+    min-width: 100%;
+}
+#about_section {
+    display: grid;
+    padding: 5vh;
+    gap: 3em;
+}
+
+.article-wrapper > * {
+    flex: 1 1 45%;
+}
+.article-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.red {
+    background: red;
+}
+.green {
+    background-color: green;
+}
+.yellow {
+    background: yellow;
+}
+.purple {
+    background-color: blueviolet;
+}
+@media screen and (min-width: 600px) {
+    #about_section {
+        grid-template-columns: 4fr 1fr;
+        column-gap: 1em;
+    }
+}

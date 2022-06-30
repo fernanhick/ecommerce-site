@@ -7,7 +7,7 @@
     align-items: center;
     padding: 2vh 10vw;
     background: var(--main-green-dark);
-    height: 3em;
+    height: 2em;
     transition: all 0.3s;
     overflow: hidden;
     border-bottom: 1px solid var(--hover-light);
