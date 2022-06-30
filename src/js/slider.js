@@ -1,7 +1,9 @@
-const slider = document.querySelector('#slider')
+/* Import data for populating slider */
 import { data } from '../data/slider-data.js'
 
-slider.scrollLeft = 150
+/* Get Slider and Slider Container element */
+const slider = document.querySelector('#slider')
+const sliderContainer = document.querySelector('#slider-container')
 
 data.forEach((e) => {
     let slide = document.createElement('div')
@@ -14,45 +16,21 @@ data.forEach((e) => {
 
     slider.appendChild(slide)
     slide.appendChild(slide_image)
-    slide.appendChild(slide_title)
+    /*     slide.appendChild(slide_title)
+     */
 })
 
-const ele = document.querySelector('#slider')
+const arrLeft = document.createElement('div')
+const arrRight = document.createElement('div')
+arrLeft.setAttribute('id', 'left-arrow')
+arrRight.setAttribute('id', 'right-arrow')
 
-let pos = { top: 0, left: 0, x: 0, y: 0 }
+sliderContainer.appendChild(arrLeft)
+sliderContainer.appendChild(arrRight)
 
-const mouseDownHandler = function (e) {
-    // Change the cursor and prevent user from selecting the text
-    ele.style.cursor = 'grabbing'
-    ele.style.userSelect = 'none'
-    pos = {
-        // The current scroll
-        left: ele.scrollLeft,
-        top: ele.scrollTop,
-        // Get the current mouse position
-        x: e.clientX,
-        y: e.clientY,
-    }
-
-    document.addEventListener('mousemove', mouseMoveHandler)
-    document.addEventListener('mouseup', mouseUpHandler)
-}
-
-const mouseMoveHandler = function (e) {
-    // How far the mouse has been moved
-    const dx = e.clientX - pos.x
-    const dy = e.clientY - pos.y
-
-    // Scroll the element
-    ele.scrollTop = pos.top - dy
-    ele.scrollLeft = pos.left - dx
-}
-const mouseUpHandler = function () {
-    document.removeEventListener('mousemove', mouseMoveHandler)
-    document.removeEventListener('mouseup', mouseUpHandler)
-
-    ele.style.cursor = 'grab'
-    ele.style.removeProperty('user-select')
-}
-
-slider.addEventListener('mousedown', mouseDownHandler)
+arrLeft.addEventListener('click', () => {
+    slider.scrollLeft -= 400
+})
+arrRight.addEventListener('click', () => {
+    slider.scrollLeft += 400
+})

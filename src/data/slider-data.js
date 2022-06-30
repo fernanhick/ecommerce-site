@@ -5,7 +5,7 @@ export const data = [
         img: 'https://via.placeholder.com/150',
     },
     {
-        product: 'clothes-2',
+        product: 'Nike Jordan',
         price: '£20',
         img: 'https://via.placeholder.com/150',
     },
@@ -35,32 +35,32 @@ export const data = [
         img: 'https://via.placeholder.com/150',
     },
     {
-        product: 'accessory-1',
+        product: 'accessory-2',
         price: '£10',
         img: 'https://via.placeholder.com/150',
     },
     {
-        product: 'accessory-1',
+        product: 'accessory-3',
         price: '£10',
         img: 'https://via.placeholder.com/150',
     },
     {
-        product: 'accessory-1',
+        product: 'accessory-4',
         price: '£10',
         img: 'https://via.placeholder.com/150',
     },
     {
-        product: 'accessory-1',
+        product: 'accessory-5',
         price: '£10',
         img: 'https://via.placeholder.com/150',
     },
     {
-        product: 'accessory-1',
+        product: 'accessory-6',
         price: '£10',
         img: 'https://via.placeholder.com/150',
     },
     {
-        product: 'accessory-1',
+        product: 'accessory-7',
         price: '£10',
         img: 'https://via.placeholder.com/150',
     },

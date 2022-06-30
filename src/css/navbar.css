@@ -7,8 +7,8 @@
     align-items: center;
     padding: 2vh 10vw;
     background: var(--main-green-dark);
-    height: 30px;
-    transition: all 1s;
+    height: 3em;
+    transition: all 0.3s;
     overflow: hidden;
     border-bottom: 1px solid var(--hover-light);
 }
@@ -44,7 +44,7 @@
     border-radius: 5px;
 }
 .nav_toggle {
-    height: 15vh !important;
+    height: 17vh !important;
 }
 .nav_toggle ul {
     display: flex !important;

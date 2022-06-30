@@ -23,6 +23,11 @@ body {
     background-color: var(--background-body);
     place-items: center;
 }
+@media screen and (min-width: 2000px) {
+    :root {
+        font-size: 32px;
+    }
+}
 @media screen and (max-width: 1200px) {
     :root {
         font-size: 26px;
@@ -61,7 +66,7 @@ main {
     align-items: center;
     overflow: hidden;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 #hero_section picture img {
     min-width: 100%;
@@ -78,6 +83,8 @@ main {
     backdrop-filter: blur(10px);
     padding: 1em;
     align-self: flex-start;
+    transform: translate(10%, 8em);
+    margin-right: 30px;
 }
 #hero_title {
     font-size: 1.2em;
@@ -97,6 +104,7 @@ main {
     cursor: pointer;
     box-shadow: 1px 1px 5px var(--main-font-light);
     transition: all 0.2s ease-in-out;
+    transform: translateY(5em);
 }
 #hero_button:hover {
     background-color: var(--main-green-dark-strong);
@@ -119,8 +127,6 @@ main {
 #footer_bar section a {
     text-decoration: none;
     color: var(--main-font-light);
-}
-#footer_bar section {
 }
 
 @media screen and (max-width: 600px) {
