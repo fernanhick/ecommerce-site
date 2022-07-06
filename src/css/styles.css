@@ -2,7 +2,7 @@
 @import 'slider.css';
 
 :root {
-    font-size: 18px;
+    font-size: 14px;
     --background-body: rgba(0, 0, 0, 0.9);
     --main-green-dark: rgb(75, 133, 0);
     --main-green-dark-shadow: rgb(17, 31, 0);
@@ -23,17 +23,17 @@ body {
     background-color: var(--background-body);
     place-items: center;
 }
-@media screen and (min-width: 2000px) {
+/* @media screen and (min-width: 2000px) {
     :root {
         font-size: 32px;
     }
-}
-@media screen and (max-width: 1200px) {
+} */
+@media screen and (min-width: 50em) {
     :root {
-        font-size: 26px;
+        font-size: 1.1em;
     }
 }
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
     :root {
         font-size: 16px;
     }
@@ -47,7 +47,7 @@ body {
     :root {
         font-size: 12px;
     }
-}
+} */
 main {
     margin: 0 auto;
 
@@ -138,9 +138,6 @@ main {
     min-width: 100%;
 }
 
-#about_section article {
-}
-
 #about_section {
     display: grid;
     gap: 10em;
@@ -160,33 +157,62 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-.red > h2 {
+.article-wrapper > * > h2 {
+    max-width: 30%;
     position: sticky;
     top: 3em;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: inherit;
+
+    transition: 0.5s ease-in-out;
+}
+.article-wrapper > * {
+    transition: background-size 0.5s ease-in-out;
+    background-size: 100%;
+    background-blend-mode: multiply;
+}
+
+.article-wrapper > *:hover > h2 {
+    background-color: white;
+    color: black;
+}
+.article-wrapper > *:hover {
+    background-size: 102%;
+    background-blend-mode: normal;
 }
 .red {
-    background: red;
+    background-color: red;
+    background-image: url('/src/images/article-home/clothing.webp');
 }
 .green {
     background-color: green;
-}
-.yellow {
-    background: yellow;
+    background-image: url('/src/images/article-home/footwear.webp');
 }
 .purple {
     background-color: blueviolet;
+    background-image: url('/src/images/article-home/accessories.webp');
+}
+.orange {
+    background-color: orange;
+    background-image: url('/src/images/article-home/sportsgear.webp');
 }
 .aside-wrapper {
     background-color: greenyellow;
     min-height: 40vh;
+    padding: 0.5em 0;
 }
 .aside-article {
     top: 3em;
     position: sticky;
     background: green;
     padding: 1em;
+    min-width: 200px;
 }
 @media screen and (min-width: 600px) {
     #about_section {

@@ -105,3 +105,13 @@
     right: 0.2em;
     transform: rotate(135deg) translateX(11px);
 }
+
+@media screen and (max-width: 600px) {
+    #left-arrow,
+    #right-arrow {
+        display: none;
+    }
+    #slider-container {
+        padding: 5px 5px;
+    }
+}

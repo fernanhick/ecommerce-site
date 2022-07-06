@@ -8,14 +8,14 @@
     padding: 2vh 10vw;
     background: var(--main-green-dark);
     height: 2em;
-    transition: all 0.3s;
+    transition: height 0.3s;
     overflow: hidden;
     border-bottom: 1px solid var(--hover-light);
 }
 #navigation ul {
     display: flex;
     gap: 0.5rem;
-    transition: all ease-in-out 1s;
+    transition: background-color ease-in-out 1s;
 }
 #navigation ul li {
     list-style-type: none;
