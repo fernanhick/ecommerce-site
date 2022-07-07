@@ -10,14 +10,13 @@ data.forEach((e) => {
     slide.classList.add('slide')
 
     let slide_title = document.createElement('h3')
-    slide_title.innerText = `${e.product}`
+    slide_title.innerText = `${e.name}`
     let slide_image = document.createElement('img')
-    slide_image.setAttribute('src', `${e.img}`)
+    slide_image.setAttribute('src', `${e.img.replace(/h=408/, 'h=280')}`)
 
     slider.appendChild(slide)
     slide.appendChild(slide_image)
-    /*     slide.appendChild(slide_title)
-     */
+    slide.appendChild(slide_title)
 })
 
 const arrLeft = document.createElement('div')
