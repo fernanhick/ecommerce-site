@@ -1,9 +1,7 @@
 function genProductId(num = 10, append = 5) {
     let result = []
-
     let val = () => {
         let rnd = Math.floor(Math.random() * 122)
-        console.log(rnd)
         if (rnd >= 97 && rnd <= 102) {
             result.push(String.fromCharCode(rnd))
         } else if (rnd > 48 && rnd < 57) {
@@ -22,5 +20,3 @@ function genProductId(num = 10, append = 5) {
     }
     return result.join('')
 }
-console.log(String.fromCharCode())
-console.log(genProductId())
