@@ -23,31 +23,13 @@ body {
     background-color: var(--background-body);
     place-items: center;
 }
-/* @media screen and (min-width: 2000px) {
-    :root {
-        font-size: 32px;
-    }
-} */
+
 @media screen and (min-width: 50em) {
     :root {
         font-size: 1.1em;
     }
 }
-/* @media screen and (max-width: 900px) {
-    :root {
-        font-size: 16px;
-    }
-}
-@media screen and (max-width: 600px) {
-    :root {
-        font-size: 14px;
-    }
-}
-@media screen and (max-width: 400px) {
-    :root {
-        font-size: 12px;
-    }
-} */
+
 main {
     margin: 0 auto;
 
@@ -158,6 +140,8 @@ main {
     justify-content: center;
     align-items: center;
     position: relative;
+    max-width: 500px;
+    max-height: 500px;
 }
 .cat-anchor {
     position: absolute;
@@ -185,11 +169,6 @@ main {
     background-blend-mode: multiply;
 }
 
-.article-wrapper > *:hover > h2 {
-    /*     background-color: white;
-
-    color: black; */
-}
 .article-wrapper > *:hover {
     background-size: 102%;
     background-blend-mode: normal;
@@ -211,11 +190,16 @@ main {
     background-image: url('/src/images/article-home/sportsgear.webp');
 }
 .aside-wrapper {
-    /*     background-color: greenyellow;
- */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     min-height: 40vh;
+    gap: 2em;
 }
 .aside-article {
+    flex: 1 1 0;
+}
+.aside-article > div {
     top: 3em;
     position: sticky;
     background: green;
@@ -227,5 +211,11 @@ main {
         grid-template-columns: 4fr 1fr;
         column-gap: 1em;
         padding: 5vh;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    :root {
+        font-size: 24px;
     }
 }

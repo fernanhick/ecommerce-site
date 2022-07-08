@@ -13,10 +13,12 @@ data.forEach((e) => {
     slide_title.innerText = `${e.name}`
     let slide_image = document.createElement('img')
     slide_image.setAttribute('src', `${e.img.replace(/h=408/, 'h=280')}`)
-
+    let slide_price = document.createElement('span')
+    slide_price.textContent = `${e.price}`
     slider.appendChild(slide)
     slide.appendChild(slide_image)
     slide.appendChild(slide_title)
+    slide.appendChild(slide_price)
 })
 
 const arrLeft = document.createElement('div')
@@ -28,8 +30,8 @@ sliderContainer.appendChild(arrLeft)
 sliderContainer.appendChild(arrRight)
 
 arrLeft.addEventListener('click', () => {
-    slider.scrollLeft -= 400
+    slider.scrollLeft -= 800
 })
 arrRight.addEventListener('click', () => {
-    slider.scrollLeft += 400
+    slider.scrollLeft += 800
 })
