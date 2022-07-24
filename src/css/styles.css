@@ -260,3 +260,8 @@ main {
         font-size: 24px;
     }
 }
+
+#contact_section {
+    background-color: var(--background-body);
+    filter: brightness(0.6);
+}
